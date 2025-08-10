@@ -4,7 +4,6 @@
 **Description:**
 Automatic detection of empathy and politeness in Chinese medical conversations, combining rule-based features and transformer-based models.
 
----
 
 ## 1. Overview
 
@@ -12,14 +11,12 @@ Automatic detection of empathy and politeness in Chinese medical conversations, 
 Detect **empathy** and **politeness** expressions in **Chinese medical dialogues**, focusing on doctor-patient conversations.
 We integrate **linguistic rules**, **lexical resources**, and **pre-trained transformer models** to achieve accurate and interpretable classification.
 
----
 
 ## 2. Background
 
 Empathy and politeness are crucial in medical communication.
 Prior research (e.g., Yeomans et al., *The R Journal*, 2018) introduced structured frameworks for **politeness detection** in English, combining feature engineering and machine learning. We adapt and extend this approach to Chinese medical contexts, emphasizing **multi-label detection** of empathy strategies and politeness markers.
 
----
 
 ## 3. Research Questions
 
@@ -28,7 +25,6 @@ Prior research (e.g., Yeomans et al., *The R Journal*, 2018) introduced structur
 3. What is the performance gap between **rule-based**, **traditional ML**, and **transformer-based** methods?
 4. How does **contextual information** (previous turns) improve detection?
 
----
 
 ## 4. Data & Privacy
 
@@ -37,7 +33,6 @@ Prior research (e.g., Yeomans et al., *The R Journal*, 2018) introduced structur
 * All data must be **anonymized** before use.
 * Ethics: see `docs/ethics_privacy.md`.
 
----
 
 ## 5. Label Schema
 
@@ -59,7 +54,6 @@ Prior research (e.g., Yeomans et al., *The R Journal*, 2018) introduced structur
 * Softened imperatives
 * Negations
 
----
 
 ## 6. Methods
 
@@ -69,7 +63,6 @@ Prior research (e.g., Yeomans et al., *The R Journal*, 2018) introduced structur
 * **Multi-label Classification** with contextual input
 * **Evaluation Metrics**: micro/macro F1, PR-AUC, dialogue-level consistency
 
----
 
 ## 7. Quick Start
 
@@ -93,21 +86,18 @@ python -m src.training.evaluate --ckpt outputs/ckpt.pt --data data/processed/dev
 python -m src.training.inference --ckpt outputs/ckpt.pt --in data/processed/test.jsonl --out outputs/preds.jsonl
 ```
 
----
 
 ## 8. Outputs
 
 * Model weights, metrics, and visualizations in `outputs/`
 * Model Card in `docs/model_card.md`
 
----
 
 ## 9. Ethics & Limitations
 
 * Strict de-identification required.
 * For **research & education** only — not for clinical decision-making.
 
----
 
 ## 10. Citation
 
@@ -124,13 +114,8 @@ date-released: 2025-08-10
 repository-code: "https://github.com/<your-org>/chinese-medical-empathy"
 ```
 
----
 
 ## 11. License
 
 MIT License (code) + separate license for data (research-only).
 
----
-
-我可以帮你把这一套直接打包成一个 **可上传到 GitHub 的初始化压缩包**，包括 README、目录树和空文件，这样你只需要解压 + git push 就行。
-你要我帮你生成这个初始化包吗？这样你可以马上建仓库并运行基本框架。
